@@ -64,3 +64,23 @@ html {
     font-weight: bold;
 }
 /* ----------------------------- */
+
+
+/* Navigation Styles */
+nav {
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 50px;
+}
+
+.company{
+    font-size: var(--text-H3);
+    font-weight: bold;
+}
+
+.profile-name {
+    font-size: var(--text-H5);
+}
+/* --------------------------- */
