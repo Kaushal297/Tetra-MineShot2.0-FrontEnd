@@ -54,24 +54,17 @@ html {
 .m-r-10 {
     margin-right: 1rem;
 }
-
-.icon {
-    width: 24px;
-    height: 24px;
-    fill: var(--clr-black);
-}
-
-.anchor {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-}
 /* ----------------------------- */
 
 /* Navigation Styles */
 .menu {
     padding: 0.5rem 2rem;
+}
+
+.hamburger-menu {
+    width: 24px;
+    height: 24px;
+    fill: var(--clr-black);
 }
 
 .logo {
@@ -86,6 +79,12 @@ html {
 .profile-name {
     font-size: var(--text-H5);
 }
+
+.header-image img {
+    width: 100%;
+    height: 100px;
+}
+
 /* --------------------------- */
 
 /* Footer Styles */
@@ -108,8 +107,89 @@ footer p {
     font-size: var(--text-H6);
 }
 
-.header-image img {
-    width: 100%;
-    height: 100px;
+.anchor {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.anchor:hover {
+    color: var(--clr-black);
+    font-weight: bold;
 }
 /* -------------------------- */
+
+/* Main Content-Body */
+.body-menu {
+    height: 5rem;
+    padding: 1rem 2rem;
+}
+
+.body-heading {
+    font-size: var(--text-H3);
+    font-weight: bold;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input[type="text"],
+input[type="date"] {
+    border: none;
+    font-family: adani-regular;
+    font-size: var(--text-H5);
+    outline: none;
+    cursor: pointer;
+}
+
+.input-outline {
+    border: 1px solid var(--clr-prim);
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.input-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: var(--clr-prim);
+}
+
+.input-icon--arrow {
+    height: 15px;
+    width: 15px;
+    fill: none;
+    stroke: var(--clr-prim);
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.w-90-perc {
+    width: 90%;
+}
+
+.input-save {
+    border: 1px solid var(--clr-prim);
+    background-color: var(--clr-prim);
+    padding: 1rem 2rem;
+    color: var(--clr-white);
+    letter-spacing: 3px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    cursor: pointer;
+}
+
+.input-save:hover {
+    background-color: var(--clr-white);
+    border: 1px solid var(--clr-prim);
+    color: var(--clr-prim);
+}
+
+.input-outline:hover {
+    border: 3px solid var(--clr-prim);
+}
