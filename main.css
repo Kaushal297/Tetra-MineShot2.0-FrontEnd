@@ -35,6 +35,10 @@ html {
     display: flex;
 }
 
+.flex-col {
+    flex-direction: column;
+}
+
 .jc-spbt {
     justify-content: space-between;
 }
@@ -66,8 +70,8 @@ html {
 /* ----------------------------- */
 
 /* Navigation Styles */
-nav {
-    padding: 1rem 2rem;
+.menu {
+    padding: 0.5rem 2rem;
 }
 
 .logo {
@@ -103,3 +107,9 @@ footer {
 footer p {
     font-size: var(--text-H6);
 }
+
+.header-image img {
+    width: 100%;
+    height: 100px;
+}
+/* -------------------------- */
