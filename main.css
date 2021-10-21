@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'adani-regular';
+    src: url('./assets/fonts/adani-regular.woff2') format('woff2');
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
