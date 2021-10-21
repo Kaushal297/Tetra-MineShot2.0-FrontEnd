@@ -84,3 +84,19 @@ nav {
     font-size: var(--text-H5);
 }
 /* --------------------------- */
+
+/* Footer Styles */
+footer {
+    background-color: var(--clr-prim);
+    padding: 1rem 2rem;
+    color: var(--clr-white);
+}
+
+.software-version{
+    font-weight: bold;
+    font-size: var(--text-H5);
+}
+
+footer p {
+    font-size: var(--text-H6);
+}
