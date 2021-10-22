@@ -22,7 +22,9 @@
     --clr-prim-dark: #000000;
     --clr-sec: #17b677;
     --clr-black: #000000;
-    --clr-white: #FFFFFF
+    --clr-white: #FFFFFF;
+    --clr-disabled: #BDBDBD;
+    --clr-grey: #E0E0E0;
 }
 
 html,body {
@@ -128,6 +130,7 @@ footer p {
 /* Heading Tab for Body */
 .body-menu {
     padding: 1rem 2rem;
+    position: relative;
 }
 
 .body-heading {
@@ -135,11 +138,9 @@ footer p {
     font-weight: bold;
 }
 
-/* disabling Default calendar */
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
+::-webkit-calendar-picker-indicator {
+    background-image: 
+        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%232F80ED" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
 }
 
 input[type="text"],
@@ -189,6 +190,7 @@ input[type="date"] {
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .input-save:hover {
@@ -210,7 +212,7 @@ input[type="date"] {
     border: 3px solid var(--clr-prim);
     border-radius: 10px;
     margin: 0 2rem;
-    height: calc(100vh - 300px);
+    height: calc(100vh - 350px);
     position: relative;
 }
 
@@ -218,6 +220,7 @@ table {
     width: 100%;
     border-spacing: 0.5rem;
     border-collapse: unset;
+    font-size: var(--text-H5);
 }
 
 th {
@@ -226,12 +229,14 @@ th {
     border-radius: 0.5rem;
     color: var(--clr-white);
     font-weight: normal;
+    text-align: center;
 }
 
 td {
     border: 1px solid var(--clr-prim);
     border-radius: 5px;
     padding: 1rem;
+    text-align: center;
 }
 
 td:last-child {
@@ -263,4 +268,77 @@ td:last-child {
     background-color: var(--clr-white);
     border: 2px solid var(--clr-prim);
     fill: var(--clr-prim);
+}
+
+.input-outline--selectBtn {
+    padding: 0.9rem 1rem;
+    outline: none;
+    color: var(--clr-prim);
+}
+
+.input-outline--selectBtn option {
+    color: var(--clr-prim-dark);
+}
+
+.hide {
+    position: absolute;
+    left: -9999px;
+}
+
+/* overriding Bootstrap Styles */
+.form-select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 3px solid var(--clr-prim);
+    color: grey;
+    font-size: var(--text-H5);
+    border-radius: 5px;
+}
+
+.form-select option {
+    color: var(--clr-prim-dark);
+}
+
+.w-150px {
+    width: 170px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.alert-success {
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: var(--text-H5);
+    text-align: center;
+}
+
+.circle {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--clr-grey);
+    border: 1px solid var(--clr-disabled);
+}
+
+.general-list {
+    width: 40%;
+}
+
+.page-link {
+    font-size: var(--text-H5);
+    padding: 1rem 2rem;
+}
+
+.page-navigation {
+    margin-top: 10px;
+}
+
+.transform-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
