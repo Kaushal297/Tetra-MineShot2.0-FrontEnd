@@ -35,6 +35,7 @@
     --clr-white: #FFFFFF;
     --clr-disabled: #BDBDBD;
     --clr-grey: #E0E0E0;
+    --clr-black-alpha: rgba(0,0,0,0.1);
 
     /* font-family */
     --adani-regular : 'Adani-Regular';
@@ -49,6 +50,13 @@ html,body {
 
 body {
     font-family: var(--adani-regular);
+}
+
+input,
+select {
+    font-size: var(--text-H5);
+    outline: none;
+    cursor: pointer;
 }
 
 /* General Classes */
@@ -78,6 +86,15 @@ body {
 
 .m-r-10 {
     margin-right: 1rem;
+}
+/* ------------------------------ */
+/* Bootstrap Override Styles */
+.btn {
+    font-size: 1.6rem;
+}
+
+p {
+    margin-bottom: 0;
 }
 /* ----------------------------- */
 
@@ -154,6 +171,7 @@ footer p {
 
 .body-heading {
     font-size: var(--text-H3);
+    font-family: var(--adani-medium);
     font-weight: bold;
 }
 
@@ -361,3 +379,119 @@ td:last-child {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* CMS Styles */
+#CMS {
+    height: calc(100vh - 210px);
+}
+
+.cms-header {
+    margin: 1rem 5rem;
+}
+
+.input-custom-border {
+    width: 200px;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--clr-prim);
+    border-radius: 5px;
+}
+
+.custom-border{
+    border: 1px solid var(--clr-prim);
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-reset {
+    border: none;
+}
+
+.filter-container {
+    width: 100%;
+    height: 20px;
+    background-color: var(--clr-grey);
+    margin-top: 4px;
+    border-radius: 10px;
+}
+
+.filter-item {
+    font-size: var(--text-H6);
+    font-family: var(--adani-medium);
+    border: 1px solid var(--clr-prim);
+    padding: 0 1rem;
+    border-radius: 5px;
+    color: var(--clr-prim);
+}
+
+.cms-body {
+    height: calc(100vh - 310px);
+    margin: 0 5rem;
+    border: 2px solid var(--clr-prim);
+    border-radius: 5px;
+}
+
+.cms-table {
+    width: 100%;
+    height: calc(100vh - 370px);
+}
+
+.seprator {
+    height: 3px !important;
+    background-color: var(--clr-prim);
+    color: var(--clr-prim);
+    margin: 0 1rem;
+}
+
+.cms-footer {
+    margin: 0 1rem;
+}
+
+.pagination {
+
+}
+
+.pagination-btn {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    background-color: rgba(196, 196, 196, 0.05);
+    border: 1px solid rgba(196, 196, 196, 0.5);
+}
+
+.pagination p,
+.previous-btn p {
+    font-family: var(--adani-bold);
+    letter-spacing: 1.5px;
+    font-size: var(--text-H5);
+}
+
+.left-arrow {
+    transform: rotate(90deg);
+}
+
+.right-arrow {
+    transform: rotate(270deg);
+    stroke: var(--clr-black);
+}
+
+.disabled {
+    stroke: var(--clr-disabled);
+    color: var(--clr-disabled);
+}
+
+.active {
+    background-color: var(--clr-prim);
+    color: var(--clr-white);
+}
+
+.btn-add {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--clr-prim);
+    border: 2px solid var(--clr-white);
+    box-shadow: 12px 12px 24px 0px var(--clr-black-alpha);
+}
+/* ---------------------------------------- */
