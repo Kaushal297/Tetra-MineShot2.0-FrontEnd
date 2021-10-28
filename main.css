@@ -1,6 +1,16 @@
 @font-face {
-    font-family: 'adani-regular';
-    src: url('./assets/fonts/adani-regular.woff2') format('woff2');
+    font-family: 'Adani-Regular';
+    src: url('./assets/fonts/Adani-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Adani-Bold';
+    src: url('./assets/fonts/Adani-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Adani-Medium';
+    src: url('./assets/fonts/Adani-Medium.ttf') format('truetype');
 }
 
 * {
@@ -25,11 +35,20 @@
     --clr-white: #FFFFFF;
     --clr-disabled: #BDBDBD;
     --clr-grey: #E0E0E0;
+
+    /* font-family */
+    --adani-regular : 'Adani-Regular';
+    --adani-bold: 'Adani-Bold';
+    --adani-medium: 'Adani-Medium';
 }
 
 html,body {
-    font-family: 'adani-regular';
+    font-family: var(--adani-regular);
     font-size: 62.5%;
+}
+
+body {
+    font-family: var(--adani-regular);
 }
 
 /* General Classes */
@@ -146,7 +165,7 @@ footer p {
 input[type="text"],
 input[type="date"] {
     border: none;
-    font-family: 'adani-regular';
+    font-family: var(--adani-regular);
     font-size: var(--text-H5);
     outline: none;
     cursor: pointer;
@@ -185,7 +204,7 @@ input[type="date"] {
     padding: 1rem 2rem;
     font-size: var(--text-H5);
     color: var(--clr-white);
-    font-family: 'adani-regular';
+    font-family: var(--adani-regular);
     letter-spacing: 3px;
     border-radius: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
