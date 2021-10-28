@@ -29,10 +29,11 @@
 
     /* Colors */
     --clr-prim: #2F80ED;
-    --clr-prim-dark: #000000;
+    --clr-prim-dark: #0b5ed7;
     --clr-sec: #17b677;
     --clr-black: #000000;
     --clr-white: #FFFFFF;
+    --clr-danger: #dc3545;
     --clr-disabled: #BDBDBD;
     --clr-grey: #E0E0E0;
     --clr-black-alpha: rgba(0,0,0,0.1);
@@ -129,13 +130,15 @@ p {
 /* --------------------------- */
 
 /* Footer Styles */
-footer {
+footer,
+.footer {
     background-color: var(--clr-prim);
     padding: 1rem 2rem;
     color: var(--clr-white);
 
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
 }
 
@@ -145,7 +148,8 @@ footer {
     margin-bottom: 0;
 }
 
-footer p {
+footer p,
+.footer p {
     font-size: var(--text-H6);
     margin-bottom: 0;
 }
@@ -181,7 +185,8 @@ footer p {
 }
 
 input[type="text"],
-input[type="date"] {
+input[type="date"],
+input[type="password"] {
     border: none;
     font-family: var(--adani-regular);
     font-size: var(--text-H5);
@@ -315,11 +320,6 @@ td:last-child {
 
 .input-outline--selectBtn option {
     color: var(--clr-prim-dark);
-}
-
-.hide {
-    position: absolute;
-    left: -9999px;
 }
 
 /* overriding Bootstrap Styles */
@@ -519,4 +519,103 @@ td:last-child {
 
 .checkbox {
     
+}
+
+/* Login Styles */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/DSC_0214.JPG');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-container {
+    height: 70px;
+    margin-left: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-container img {
+    height: 100%;
+}
+
+.login-credentials {
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;
+    padding: 2rem;
+    background: radial-gradient(100% 98.68% at 0% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.mineshot-logo {
+    font-family: var(--adani-bold);
+    font-size: var(--text-H3);
+    letter-spacing: 1.5px;
+    background: linear-gradient(to right, #097da9 0%, #823996 50%, #bb3764 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.login-form {
+    padding: 1rem;
+    width: 100%;
+}
+
+.login-form div input {
+    width: 100%;
+}
+
+.login-box-outline {
+    padding: 1rem;
+    border: 2px solid var(--clr-prim);
+    border-radius: 5px;
+    background: var(--clr-white);
+}
+
+.btn-login{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--adani-medium);
+    font-size: var(--text-H5);
+    box-shadow: 12px 12px 24px var(--clr-black-alpha);
+}
+
+.forgot-password {
+    font-size: var(--text-H5);
+    text-decoration: none;
+    font-family: var(--adani-bold);
+    text-shadow: 5px 5px 15px var(--clr-prim);
+    letter-spacing: 1.5px;
+    color: var(--clr-prim-dark);
+}
+
+.forgot-password:hover {
+    color: var(--clr-prim);
+}
+
+.error-container {
+    font-size: var(--text-H6);
+    background: var(--clr-danger);
+    color: var(--clr-white);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0 0 10px 10px;
+}
+/* -------------------------------------- */
+
+
+.hide {
+    position: absolute;
+    left: -9999px;
 }
