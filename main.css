@@ -88,6 +88,10 @@ select {
 .m-r-10 {
     margin-right: 1rem;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
 /* ------------------------------ */
 /* Bootstrap Override Styles */
 .btn {
@@ -102,6 +106,11 @@ p {
 /* Navigation Styles */
 .menu {
     padding: 0.5rem 2rem;
+}
+
+.hamburger-checkbox:checked ~ .menu-container {
+    visibility: visible;
+    opacity: 1;
 }
 
 .hamburger-menu {
@@ -661,6 +670,82 @@ td:last-child {
 
 .font-regular {
     font-family: var(--adani-regular);
+}
+/* -------------------------------------- */
+
+/* menu styles */
+.menu-container{
+    width: 100%;
+    height: calc(100vh - 66px);
+    
+    font-size:  var(--text-H5);
+    font-family: var(--adani-medium);
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    
+    position: absolute;
+    top: 66px;
+    left: 0;
+}
+
+.menu-container ul {
+    width: 300px;
+    list-style-type: none;
+    padding: 1rem;
+    background: radial-gradient(100% 98.68% at 0% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 0 0;
+}
+
+.menu-container ul li {
+    background: linear-gradient(to right,var(--clr-sec) 0,var(--clr-prim) 100%);
+    margin-bottom: 10px;
+    padding: 1rem 2rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-container ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: -12px;
+    left: 289px;
+
+    width: 300px;
+    padding: 1rem;
+    background: radial-gradient(100% 98.68% at 0% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.menu-container ul li:hover {
+    background: linear-gradient(to right, #097da9 0%, #823996 50%, #bb3764 100%);
+    color: var(--clr-grey);
+}
+
+.menu-container ul li:hover > ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+.menu-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 /* -------------------------------------- */
 .hide {
