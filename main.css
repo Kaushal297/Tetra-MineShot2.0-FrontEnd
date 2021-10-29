@@ -624,7 +624,45 @@ td:last-child {
 }
 /* -------------------------------------- */
 
+/* Mine Selection styles */
+.mine-selection-container {
+    margin: 1rem 10rem;
+    height: calc(100vh - 230px);
+}
 
+.mine-selection-card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    width: 280px;
+    height: 220px;
+    border: 2px solid var(--clr-prim);
+    box-shadow: 5px 5px 10px 2px var(--clr-black-alpha);
+}
+
+.card-image-container {
+    height: calc(100% - 48px);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-headings {
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    font-family: var(--adani-bold);
+    font-size: var(--text-H5);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.font-regular {
+    font-family: var(--adani-regular);
+}
+/* -------------------------------------- */
 .hide {
     position: absolute;
     left: -9999px;
