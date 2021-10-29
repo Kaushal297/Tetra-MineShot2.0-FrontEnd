@@ -142,10 +142,20 @@ footer,
     width: 100%;
 }
 
+.version-container {
+    background: radial-gradient(100% 98.68% at 0% 0%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.42) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 0 1rem;
+}
+
 .software-version{
-    font-weight: bold;
+    font-family: var(--adani-bold);
     font-size: var(--text-H5);
     margin-bottom: 0;
+    background: linear-gradient(to right, #097da9 0%, #823996 50%, #bb3764 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 footer p,

@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- login -->
-    <div class="login-container">
+    <div class="login-container hide">
         <div class="overlay d-flex align-items-center">
             <div class="logo-container">
                 <img src="./assets/182444 Natural Resources logo_Four Colour Wd.png" alt="Adani logo">
@@ -59,8 +59,9 @@
             </div>
         </div>
     </div>
+
     <!-- Header -->
-    <nav class="flex flex-col hide">
+    <nav class="flex flex-col">
         <div class="menu flex jc-spbt ai-cntr">
             <div class="flex jc-spbt ai-cntr">
                 <!-- Hamburger Menu Svg -->
@@ -446,6 +447,11 @@
             </div>
         </div>
 
+        <!-- Mine Selection -->
+        <div id="MineSelection" class="show">
+
+        </div>
+
         <!-- CMS -->
         <div id="CMS" class="hide">
             <!-- CMS header -->
@@ -655,8 +661,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="flex jc-spbt ai-cntr hide">
-        <p class="software-version">MineShot 2.0</p>
+    <footer class="flex jc-spbt ai-cntr">
+        <div class="version-container">
+            <p class="software-version">MineShot 2.0</p>
+        </div>
         <p>Designed and Developed by 
             <a href="https://www.tetrain.com/" class="anchor">Tetra Information Services Pvt. Ltd</a>
         </p>
