@@ -92,6 +92,42 @@ select {
 .cursor-pointer {
     cursor: pointer;
 }
+
+.adani-regular {
+    font-family: var(--adani-regular);
+}
+
+.adani-medium {
+    font-family: var(--adani-medium);
+}
+
+.adani-bold {
+    font-family: var(--adani-bold);
+}
+
+.h1 {
+    font-size: var(--text-H1);
+}
+
+.h2 {
+    font-size: var(--text-H2);
+}
+
+.h3 {
+    font-size: var(--text-H3);
+}
+
+.h4 {
+    font-size: var(--text-H4);
+}
+
+.h5 {
+    font-size: var(--text-H5);
+}
+
+.h6 {
+    font-size: var(--text-H6);
+}
 /* ------------------------------ */
 /* Bootstrap Override Styles */
 .btn {
@@ -746,6 +782,64 @@ td:last-child {
 
 .menu-container::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+/* -------------------------------------- */
+
+/* Dashboard styles */
+.dashboard-container {
+    width: calc(100% - 10rem);
+    height: calc(100vh - 215px - 4rem);
+
+    margin: 2rem 5rem;
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.graph-container{
+    /* remove */
+    border: 1px solid var(--clr-prim);
+    
+    font-size: var(--text-H5);
+}
+
+.graph-container:nth-child(1){
+    grid-area: 1 / 1 / 1 / 3;
+}
+
+.graph-container:nth-child(2){
+    grid-area: 1 / 3 / 1 / 5;
+}
+
+.graph-container:nth-child(3){
+    grid-area: 1 / 5 / 1 / 7;
+}
+
+.graph-container:nth-child(4){
+    grid-area: 1 / 7 / 1 / 9;
+}
+
+.graph-container:nth-child(5){
+    grid-area: 2 / 1 / 2 / 8;
+}
+
+.graph-container:nth-child(6){
+    grid-area: 3 / 1 / 3 / 8;
+}
+
+.graph-container:nth-child(7){
+    grid-area: 2 / 8 / 4 / 9;
+
+    /* remove */
+    border: none;
+}
+
+.graph-card-outline {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--clr-prim);
+    border-radius: 5px;
 }
 /* -------------------------------------- */
 .hide {

@@ -449,7 +449,7 @@
         </div>
 
         <!-- Mine Selection -->
-        <div id="MineSelection" class="show">
+        <div id="MineSelection" class="hide">
             <div class="mine-selection-container d-flex justify-content-between flex-wrap align-items-center">
                 <!-- Card template -->
                 <div class="mine-selection-card">
@@ -508,6 +508,108 @@
                     </div>
                     <div class="card-headings d-flex justify-content-center align-items-center">
                         <p>Business Finance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="Dashboard" class="">
+            <div class="dashboard-container">
+                <div class="graph-container d-flex flex-col justify-content-between p-4">
+                    <p class="adani-bold text-center h4">Mine Production</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge1" class="meter-gauge"></canvas>
+                            <p>OBR (Cu M)</p>
+                        </div>
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge2" class="meter-gauge"></canvas>
+                            <p>ROM (Tonnes)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph-container d-flex flex-col justify-content-between p-4"">
+                    <p class="adani-bold text-center h4">Processing (Tonnes)</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge3" class="meter-gauge"></canvas>
+                            <p>Washed Coal</p>
+                        </div>
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge4" class="meter-gauge"></canvas>
+                            <p>Reject Coal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph-container d-flex flex-col justify-content-between p-4"">
+                    <p class="adani-bold text-center h4">Dispatch (Tonnes)</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge5" class="meter-gauge"></canvas>
+                            <p>Washed Coal</p>
+                        </div>
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge6" class="meter-gauge"></canvas>
+                            <p>Reject Coal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph-container d-flex flex-col justify-content-between p-4"">
+                    <p class="adani-bold text-center h4">Rakes (#)</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge7" class="meter-gauge"></canvas>
+                            <p>Washed Coal</p>
+                        </div>
+                        <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold" style="height: 124px; width: 124px;">
+                            <canvas id="MeterGauge8" class="meter-gauge"></canvas>
+                            <p>Reject Coal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="graph-container">
+
+                </div>
+                <div class="graph-container">
+
+                </div>
+                <div class="graph-container d-flex flex-col justify-content-between h-100">
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            OEE
+                        </p>
+                        <span class="text-success font-weight-bold adani-bold">3</span>
+                    </div>
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            Yield 
+                        </p>
+                        <span class="text-success font-weight-bold adani-bold">90%</span>
+                    </div>
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            Tree felling
+                        </p>
+                        <span class="text-success font-weight-bold adani-bold">100</span>
+                    </div>
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            Rainfall 
+                        </p>
+                        <span class="text-warning font-weight-bold adani-bold">4 mm</span>
+                    </div>
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            Near Miss
+                        </p>
+                        <span class="text-danger font-weight-bold adani-bold">3</span>
+                    </div>
+                    <div class="graph-card-outline d-flex justify-content-between align-items-center">
+                        <p>
+                            Fatal
+                        </p>
+                        <span class="text-success font-weight-bold adani-bold">0</span>
                     </div>
                 </div>
             </div>
@@ -1089,6 +1191,10 @@
             </li>
         </ul>
     </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- index.js -->
     <script src="./index.js"></script>
 </body>
 </html>
