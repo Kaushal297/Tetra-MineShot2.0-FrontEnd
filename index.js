@@ -4,29 +4,6 @@ const graphdataArray = {
     data: [[15000, 7000, 7000],[20000, 7000, 7000],[15000, 7000, 7000],[15000, 7000, 7000],[15000, 7000, 7000],[15000, 7000, 7000],[15000, 7000, 7000],[15000, 7000, 7000]],
     needleValue: [19309,25000,13309,3656,25977,8128,7,1]
 }
-let congifDataArray = [];
-for(let i=0;i<8;i++){
-    congifDataArray.push({
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                data: graphdataArray.data[i],
-                backgroundColor: [
-                    'rgb(191, 80, 78)',
-                    'rgb(155, 187, 88)',
-                    'rgb(129, 100, 163)'
-                ],
-                needleValue: graphdataArray.needleValue[i],
-                hoverOffset: 4,
-                cutout: '80%',
-                circumference:180,
-                rotation: 270
-            }]
-        },
-        options: {},
-        plugins: [gaugeNeedle]
-    })
-}
 
 //   gaugeNeedle block (Do not Change this block of code)
 const gaugeNeedle = {
@@ -67,6 +44,38 @@ const gaugeNeedle = {
     }
 }
 
+// Configuration of meter guage
+let congifDataArray = [];
+for(let i=0;i<8;i++){
+    congifDataArray.push({
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: graphdataArray.data[i],
+                backgroundColor: [
+                    'rgb(191, 80, 78)',
+                    'rgb(155, 187, 88)',
+                    'rgb(129, 100, 163)'
+                ],
+                needleValue: graphdataArray.needleValue[i],
+                hoverOffset: 4,
+                cutout: '80%',
+                circumference:180,
+                rotation: 270
+            }]
+        },
+        options: {
+            plugins:{
+                legend:{
+                    display: false
+                }
+            },
+            responsive: true,
+        },
+        plugins: [gaugeNeedle]
+    })
+}
+
 // Initialized the charts meter guage
 const OBR = new Chart(document.getElementById('MeterGauge1'),congifDataArray[0]);
 const ROM = new Chart(document.getElementById('MeterGauge2'),congifDataArray[1]);
@@ -77,3 +86,93 @@ const DispatchRC = new Chart(document.getElementById('MeterGauge6'),congifDataAr
 const RakesWC = new Chart(document.getElementById('MeterGauge7'),congifDataArray[6]);
 const RakesRC = new Chart(document.getElementById('MeterGauge8'),congifDataArray[7]);
 // ----------------------------------------------------------------------------------------------------
+
+// line graph
+const data = {
+    labels: ['21-10-2021', '22-10-2021', '23-10-2021', '24-10-2021', '25-10-2021', '26-10-2021'],
+    datasets: [{
+        data: [10000,10100,10010,10001,10101,10111],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+    }]
+}
+
+const config = {
+    type: 'line',
+    data: data,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    maxRotation: 90,
+                    minRotation: 90
+                }
+            }
+        },
+        plugins:{
+            legend:{
+                display: false
+            }
+        }
+    }
+};
+
+const mixconfig = {
+    data: {
+        datasets: [{
+            type: 'line',
+            label: 'Yield',
+            data: [55,52,53,54,55],
+            borderColor: '#00B050',
+            pointBorderColor: '#00B050',
+            pointBackgroundColor: "transparent",
+            backgroundColor: "#00B050"
+        }, {
+            type: 'line',
+            label: 'Planned Yield',
+            data: [50, 50, 50, 50,50],
+            borderDash: [10,5],
+            borderColor: '#215968',
+            pointBorderColor: '#215968',
+            pointBackgroundColor: "transparent",
+            backgroundColor: "#ffffff",
+        }],
+        labels: ['22-10-2021', '23-10-2021', '24-10-2021', '25-10-2021', '26-10-2021']
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            },
+            x: {
+                ticks: {
+                    maxRotation: 90,
+                    minRotation: 90
+                }
+            }
+        },
+        responsive: true,
+    }
+};
+
+const ObRemoval = new Chart(document.getElementById('ObRemoval'),config);
+const CoalExtraction = new Chart(document.getElementById('CoalExtraction'),config)
+const Yield = new Chart(document.getElementById('Yield'),mixconfig)

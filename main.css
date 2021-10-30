@@ -181,7 +181,7 @@ footer,
     padding: 1rem 2rem;
     color: var(--clr-white);
 
-    position: absolute;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -788,7 +788,6 @@ td:last-child {
 /* Dashboard styles */
 .dashboard-container {
     width: calc(100% - 10rem);
-    height: calc(100vh - 215px - 4rem);
 
     margin: 2rem 5rem;
 
@@ -799,9 +798,6 @@ td:last-child {
 }
 
 .graph-container{
-    /* remove */
-    border: 1px solid var(--clr-prim);
-    
     font-size: var(--text-H5);
 }
 
@@ -831,15 +827,20 @@ td:last-child {
 
 .graph-container:nth-child(7){
     grid-area: 2 / 8 / 4 / 9;
-
-    /* remove */
-    border: none;
 }
 
 .graph-card-outline {
     padding: 0.5rem 1rem;
     border: 1px solid var(--clr-prim);
     border-radius: 5px;
+}
+
+.chart-container{
+    width: calc((100% / 2) - 5px);
+}
+
+.line-graph {
+    width: calc((100% / 3) - 5px);
 }
 /* -------------------------------------- */
 .hide {
