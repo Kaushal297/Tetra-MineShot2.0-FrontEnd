@@ -37,6 +37,7 @@
     --clr-disabled: #BDBDBD;
     --clr-grey: #E0E0E0;
     --clr-black-alpha: rgba(0,0,0,0.1);
+    --clr-input-placeholder: #a9a9a9;
 
     /* font-family */
     --adani-regular : 'Adani-Regular';
@@ -60,6 +61,10 @@ select {
     cursor: pointer;
 }
 
+input:disabled{
+    cursor: not-allowed !important;
+    pointer-events: all !important;
+}
 /* General Classes */
 .flex {
     display: flex;
@@ -130,13 +135,7 @@ select {
 }
 /* ------------------------------ */
 /* Bootstrap Override Styles */
-.btn {
-    font-size: 1.6rem;
-}
 
-p {
-    margin-bottom: 0;
-}
 /* ----------------------------- */
 
 /* Navigation Styles */
@@ -447,7 +446,17 @@ td:last-child {
     border-bottom: none;
 }
 
+.btn {
+    font-size: 1.6rem;
+}
 
+p {
+    margin-bottom: 0;
+}
+
+.modal-content{
+    padding: 2rem;
+}
 /* Masters Styles */
 #Masters {
     height: calc(100vh - 210px);
@@ -866,7 +875,160 @@ td:last-child {
     width: calc((100% / 3) - 5px);
 }
 /* -------------------------------------- */
+
+/* CMS Styles */
+.add-mine-header-popup {
+    padding: 0 5rem;
+}
+
+.cms-mine-table-header {
+    width: max-content;
+    background: var(--clr-sec);
+    color: var(--clr-white);
+    padding: 1rem 5rem;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px var(--clr-black-alpha);
+    margin-bottom: 0;
+
+    position: absolute;
+    left: 50%;
+    top: -21px;
+    transform: translateX(-50%);
+}
+
+
+.cms-mine-table-body {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.input-container {
+    border: 1px solid var(--clr-prim);
+    border-radius: 5px;
+    padding-right: 1rem;
+    width: calc((100% - 50px) / 4);
+}
+
+.input-container:nth-child(n + 5){
+    margin-top: 3rem;
+}
+/* -------------------------------------- */
 .hide {
     position: absolute;
     left: -9999px;
+}
+
+/* Input Effect */
+.input-container:focus {
+    border: none;
+}
+
+.input-effect .effect:focus { 
+    outline: none;
+}
+
+.effect::placeholder {
+    color: transparent;
+}
+
+.effect {
+    font-size: var(--text-H5);
+    width: 100%;
+    padding: .7rem 1.4rem;
+    transition: 0.4s; 
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+.effect ~ .focus-border:before,
+.effect ~ .focus-border:after { 
+    content: ""; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-prim);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+
+}
+.effect ~ .focus-border:after{
+    top: auto; 
+    bottom: 0; 
+    right: auto; 
+    left: 0; 
+    transition-delay: 0.6s;
+}
+
+.effect ~ .focus-border i:before,
+.effect ~ .focus-border i:after{
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 2px; 
+    height: 0; 
+    background-color: var(--clr-prim); 
+    transition: 0.2s;
+}
+
+.effect ~ .focus-border i:after{
+    left: auto; 
+    right: 0; 
+    top: auto; 
+    bottom: 0; 
+    transition-delay: 0.4s;
+}
+
+.effect:focus ~ .focus-border:before,
+.effect:focus ~ .focus-border:after { 
+    width: 100%; 
+    transition: 0.2s; 
+    transition-delay: 0.6s;
+}
+
+.effect:focus ~ .focus-border:after { 
+    transition-delay: 0.2s; 
+}
+
+.effect:focus ~ .focus-border i:before,
+.effect:focus ~ .focus-border i:after { 
+    height: 100%; 
+    transition: 0.2s; 
+}
+
+.effect:focus ~ .focus-border i:after { 
+    transition-delay: 0.4s; 
+}
+
+.effect ~ label { 
+    position: absolute; 
+    left: 14px; 
+    top: 7px; 
+    width: fit-content; 
+    color: var(--clr-input-placeholder); 
+    transition: 0.3s; 
+    letter-spacing: 0.5px;
+    font-size: var(--text-H5);
+    z-index: 0;
+}
+
+.effect:not(:placeholder-shown) ~ label,
+.effect:focus ~ label { 
+    top: -15px; 
+    left: 12px; 
+    font-size: var(--text-H5); 
+    color: var(--clr-input-placeholder); 
+    transition: 0.3s;
+    padding: 0 1rem;
+    z-index: 1;
+    background-color: var(--clr-white);
+}
+
+.mandatory::after {
+    content: "*";
+    color: var(--clr-danger);
+    margin-left: 0.5rem;
 }
