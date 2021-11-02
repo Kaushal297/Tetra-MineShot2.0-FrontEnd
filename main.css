@@ -223,6 +223,10 @@ footer p,
 /* -------------------------- */
 
 /* Heading Tab for Body */
+main {
+    min-height: calc(100vh - 212px);
+}
+
 .body-menu {
     padding: 1rem 2rem;
     position: relative;
@@ -435,13 +439,22 @@ td:last-child {
     transform: translate(-50%, -50%);
 }
 
+.modal-footer{
+    border-top: none;
+}
+
+.modal-header{
+    border-bottom: none;
+}
+
+
 /* Masters Styles */
 #Masters {
     height: calc(100vh - 210px);
 }
 
 .cms-header {
-    margin: 1rem 5rem;
+    padding: 1rem 5rem;
 }
 
 .input-custom-border {
@@ -550,21 +563,31 @@ td:last-child {
     box-shadow: 12px 12px 24px 0px var(--clr-black-alpha);
 }
 /* ---------------------------------------- */
-
-.cms-body {
-    height: calc(100vh - 180px);
-    margin: 0 5rem;
+.table-outline {
+    margin: 0.5rem 5rem;
     border: 2px solid var(--clr-sec);
     border-radius: 5px;
 }
 
+.cms-body {
+    min-height: calc(100vh - 280px);
+}
+
 .cms-table {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 335px);
+    /* height: calc(100vh - 254px); */
+}
+
+.cms-table table tr th:first-child,
+.cms-table table tr td:first-child {
+    border: none;
+    background-color: var(--clr-white);
 }
 
 .seprator--sec,
 .active--sec,
-.cms-table table th {
+.cms-table table th,
+.table-popup-header-bg table tr th {
     background-color: var(--clr-sec);
 }
 
@@ -671,7 +694,7 @@ td:last-child {
 
 /* Mine Selection styles */
 .mine-selection-container {
-    margin: 1rem 10rem;
+    padding: 1rem 10rem;
     height: calc(100vh - 230px);
 }
 
