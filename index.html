@@ -520,7 +520,7 @@
                     <p class="adani-bold text-center h4">Mine Production</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold">
-                            <canvas id="MeterGauge1" class="meter-gauge"></canvas>
+                            <canvas id="MeterGauge1" class="meter-gauge" aria-label="Hello ARIA World" role="img">Your browser does not support the canvas element.</canvas>
                             <p>OBR (Cu M)</p>
                         </div>
                         <div class="chart-container d-flex flex-col justify-content-center align-items-center adani-bold">
@@ -664,7 +664,8 @@
                         <tr>
                             <th>
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="checkbox">
+                                    <input type="checkbox" id="checkbox1" name="checkbox" class="checkbox"/>
+                                    <label for="checkbox1">Checkbox 5</label>
                                 </div>
                             </th>
                             <th>Mine Name</th>
@@ -680,7 +681,8 @@
                         <tr>
                             <td>
                                 <div>
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="checkbox2" name="checkbox" class="checkbox"/>
+                                    <label for="checkbox2">Checkbox 5</label>
                                 </div>
                             </td>
                             <td>PEKB</td>
@@ -2507,7 +2509,7 @@
     </div>
 
     <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
     <!-- index.js -->
     <script src="./index.js"></script>
 </body>
