@@ -37,6 +37,8 @@
     --clr-disabled: #BDBDBD;
     --clr-grey: #E0E0E0;
     --clr-black-alpha: rgba(0,0,0,0.1);
+    --clr-white-alpha: rgba(255, 255, 255, 0.1);
+    --clr-black-alpha-50: rgba(0,0,0,0.5);
     --clr-input-placeholder: #a9a9a9;
 
     /* font-family */
@@ -64,6 +66,7 @@ select {
 input:disabled{
     cursor: not-allowed !important;
     pointer-events: all !important;
+    background: var(--clr-grey);
 }
 /* General Classes */
 .flex {
@@ -912,6 +915,22 @@ p {
 .input-container:nth-child(n + 5){
     margin-top: 3rem;
 }
+
+.cms-mine-table-header-heading{
+    background: var(--clr-prim);
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    margin: 0 1rem;
+    border-radius: .5rem;
+    color: var(--clr-white);
+}
+
+.cms-mine-table-header-heading svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: .5rem;
+    background: var(--clr-white-alpha);
+}
 /* -------------------------------------- */
 .hide {
     position: absolute;
@@ -1015,6 +1034,11 @@ p {
     z-index: 0;
 }
 
+.effect:disabled ~ label {
+    color: var(--clr-black-alpha-50);
+    z-index: 10;
+}
+
 .effect:not(:placeholder-shown) ~ label,
 .effect:focus ~ label { 
     top: -15px; 
@@ -1025,6 +1049,11 @@ p {
     padding: 0 1rem;
     z-index: 1;
     background-color: var(--clr-white);
+}
+
+.effect:disabled:not(:placeholder-shown) ~ label {
+    z-index: 10;
+    border-radius: 10px;
 }
 
 .mandatory::after {

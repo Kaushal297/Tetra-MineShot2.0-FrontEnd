@@ -747,7 +747,8 @@
                                     </svg>
                             </div>
                         </div>
-                        <button type="button" class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#AddMines">
+                        <button type="button" class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#AddWhiteLabel">
+                            <!-- AddWhiteLabel AddMines-->
                         <div class="btn btn-add d-flex justify-content-center align-items-center">
                                 <svg viewBox="0 0 16 16">
                                     <path d="M6 16H10V10H16V6H10V0H6V6H0V10H6V16Z" fill="white"/>
@@ -758,6 +759,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- add Whitelabel Structure-->
+        
     </main>
 
     <!-- Footer -->
@@ -1635,7 +1639,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
     </div>
     
     <!-- 5. Final Submit -->
@@ -1899,6 +1903,297 @@
           </div>
     </div>
 
+    <!-- 1. Add White Label Structure -->
+    <div class="modal fade" id="AddWhiteLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="add-mine-header-popup d-flex justify-content-between">
+                <h2 class="modal-title adani-bold">Add White Label</h2>
+                <div class="d-flex justify-content-center">
+                  <button type="button" class="btn btn-outline-danger me-4" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary" data-bs-target="#FinalSubmit" data-bs-toggle="modal">Save</button>
+                </div>
+            </div>
+            <div class="table-outline position-relative mt-5 d-flex justify-content-evenly p-4">
+                <div class="input-container position-relative">
+                    <div class="input-effect d-flex justify-content-between align-items-center">
+                        <input class="effect" type="text" placeholder="placeholder">
+                        <label class="mandatory">Mine head</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="input-container position-relative pe-0">
+                    <div class="input-effect d-flex justify-content-between align-items-center">
+                        <input class="effect" type="text" placeholder="placeholder" value="OB Removal" disabled>
+                        <label>Mineral</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="input-container position-relative pe-0">
+                    <div class="input-effect d-flex justify-content-between align-items-center">
+                        <input class="effect" type="text" placeholder="placeholder" disabled>
+                        <label>Location</label>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-outline position-relative mt-5 d-flex flex-col justify-content-between">
+                <h3 class="cms-mine-table-header adani-bold" >Master Modules</h3>
+                <div class="CMSTable mt-5 mb-3">
+                    <div class="cms-mine-table-header-heading d-flex justify-content-between align-items-center">
+                        <h4 class="adani-bold h5 mb-0">Manpower</h4>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+                            <path d="M6 16H10V10H16V6H10V0H6V6H0V10H6V16Z" fill="white"/>
+                        </svg>       
+                    </div>
+                    <div class="d-flex justify-content-between flex-wrap mt-2 p-4 hide">
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Name</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Code</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label>Address</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Cluster</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Location</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Database Prefix</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative pe-0">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="date" placeholder="placeholder">
+                                <label>Beginning Date</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>                                    
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label>Shifts</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mineral</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine head</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Administrators</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="CMSTable mb-4">
+                    <div class="cms-mine-table-header-heading d-flex justify-content-between align-items-center">
+                        <h4 class="adani-bold h5 mb-0">Equipment</h4>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+                            <path d="M6 16H10V10H16V6H10V0H6V6H0V10H6V16Z" fill="white"/>
+                        </svg>       
+                    </div>
+                    <div class="d-flex justify-content-between flex-wrap mt-2 p-4 hide">
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Name</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Code</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label>Address</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Cluster</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Location</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>    
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Database Prefix</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative pe-0">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="date" placeholder="placeholder">
+                                <label>Beginning Date</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>                                    
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label>Shifts</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mineral</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine head</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="input-container position-relative">
+                            <div class="input-effect d-flex justify-content-between align-items-center">
+                                <input class="effect" type="text" placeholder="placeholder">
+                                <label class="mandatory">Mine Administrators</label>
+                                <span class="focus-border">
+                                    <i></i>
+                                </span>
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21.5L16.514 17.006L21 21.5ZM19 11C19 13.2543 18.1045 15.4163 16.5104 17.0104C14.9163 18.6045 12.7543 19.5 10.5 19.5C8.24566 19.5 6.08365 18.6045 4.48959 17.0104C2.89553 15.4163 2 13.2543 2 11C2 8.74566 2.89553 6.58365 4.48959 4.98959C6.08365 3.39553 8.24566 2.5 10.5 2.5C12.7543 2.5 14.9163 3.39553 16.5104 4.98959C18.1045 6.58365 19 8.74566 19 11V11Z" stroke="#2F80ED" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
     <!-- Menu -->
     <input type="checkbox" id="hamburger-checkbox" class="hamburger-checkbox d-none">
     <div id="Menu" class="menu-container">
@@ -2214,6 +2509,6 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- index.js -->
-    <!-- <script src="./index.js"></script> -->
+    <script src="./index.js"></script>
 </body>
 </html>
