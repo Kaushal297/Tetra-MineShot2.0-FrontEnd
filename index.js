@@ -1,3 +1,4 @@
+// Custom Checkbox
 let CMSTableParentDiv = document.getElementsByClassName('CMSTable')
 
 for(let i=0;i<CMSTableParentDiv.length;i++){
