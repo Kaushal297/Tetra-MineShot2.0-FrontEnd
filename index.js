@@ -191,9 +191,9 @@ const mixconfig = {
     }
 };
 
-const ObRemoval = new Chart(document.getElementById('ObRemoval'),config);
-const CoalExtraction = new Chart(document.getElementById('CoalExtraction'),config)
-const Yield = new Chart(document.getElementById('Yield'),mixconfig)
+const ObRemoval = new Chart(document.getElementById('ObRemoval'),config),
+    CoalExtraction = new Chart(document.getElementById('CoalExtraction'),config),
+    Yield = new Chart(document.getElementById('Yield'),mixconfig);
 
 // Bar Graph for plan vs actual MTD
 const StackedDataArray = {
@@ -304,5 +304,5 @@ const StockConfig = {
     },
 };
 
-const PlanVsActualMTD = new Chart(document.getElementById('Plan'),BarConfig);
-const Stock = new Chart(document.getElementById('Stock'),StockConfig);
+const PlanVsActualMTD = new Chart(document.getElementById('Plan'),BarConfig),
+    Stock = new Chart(document.getElementById('Stock'),StockConfig);
